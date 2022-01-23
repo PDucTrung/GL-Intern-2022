@@ -1,0 +1,8 @@
+#Game name: Super shark Jump
+* Background: Bringing in curiosity the baby shark loves to explore the ocean, help him overcome the obstacles to roam the ocean.
+* Genre: adventure, arcade
+* Operation mechanism: To control, press SPACEBAR to jump avoiding the obstacles on the way.
+                       Overcome the obstacles to score points.
+* Goal: To survive as long as possible.
+* Features: Simple gameplay but difficult to master.
+      
