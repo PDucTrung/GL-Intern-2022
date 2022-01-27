@@ -6,8 +6,10 @@ int main()
     int n;
     long giaiThua = 1;
     
+    do{
     cout << "Nhap so n: ";
     cin >> n;
+   	}while(n <= 0);
     
     for(int i = 1; i <= n; i++) {
         giaiThua = giaiThua * i;
