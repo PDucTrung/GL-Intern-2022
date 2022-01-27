@@ -17,3 +17,23 @@ int main()
     
     return 0;
 }
+
+//Write a program to calculate n!
+
+/* cach 2
+
+int giaiThua(int n)
+{
+    if (n == 1)
+        return 1;
+    return n * giaiThua(n - 1);
+}
+int main()
+{
+    int n;
+    cin >> n;
+    cout << "Giai thua " << n << " la: " << giaiThua(n);
+    return 0;
+}
+
+*/
