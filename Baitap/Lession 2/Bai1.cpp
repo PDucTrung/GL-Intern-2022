@@ -9,7 +9,7 @@ int main()
     do{
     cout << "Nhap so n: ";
     cin >> n;
-   	}while(n <= 0);
+    }while(n <= 0);
     
     for(int i = 1; i <= n; i++) {
         giaiThua = giaiThua * i;
