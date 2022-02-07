@@ -56,6 +56,7 @@ void createListCar() {
         obj.move();
         obj.printPostition();
     }
+     listCar.clear();
 }
 
 int main()
