@@ -38,7 +38,6 @@ class dynamicObject : public BaseObject {
 };
 
 class Car : public dynamicObject {
-    //Ke thua constructor
     using dynamicObject::dynamicObject;
 };
 
@@ -63,4 +62,5 @@ int main()
 {
     createListCar();
     return 0;
+
 }
