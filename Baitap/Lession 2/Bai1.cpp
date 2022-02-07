@@ -9,7 +9,11 @@ int main()
     do{
     cout << "Nhap so n: ";
     cin >> n;
+<<<<<<< HEAD
 	}while(n <= 0); 
+=======
+    }while(n <= 0);
+>>>>>>> a6fde6f6ee526b8aef5e724eb920d96b2166cae2
     
     for(int i = 1; i <= n; i++) {
         giaiThua = giaiThua * i;
@@ -22,20 +26,3 @@ int main()
 
 //Write a program to calculate n!
 
-/* cach 2
-
-int giaiThua(int n)
-{
-    if (n == 1)
-        return 1;
-    return n * giaiThua(n - 1);
-}
-int main()
-{
-    int n;
-    cin >> n;
-    cout << "Giai thua " << n << " la: " << giaiThua(n);
-    return 0;
-}
-
-*/
