@@ -100,10 +100,10 @@ void main()
 	printf("The door is %s !!!\n\n", objSun.GetStateName());
 
 	objSun.StateChanged1();
-	printf("Next State is %s !!!\n\n", objSun.GetStateName());
+	printf("The door is is %s !!!\n\n", objSun.GetStateName());
 
 	objSun.StateChanged2();objSun.StateChanged2();
-	printf("Previous State is %s !!!\n\n", objSun.GetStateName());
+	printf("The door is is %s !!!\n\n", objSun.GetStateName());
 
 
 	system("pause");
