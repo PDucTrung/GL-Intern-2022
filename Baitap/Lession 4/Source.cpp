@@ -96,14 +96,14 @@ protected:
 void main()
 {
 
-	Door objSun(new Closed);
-	printf("The door is %s !!!\n\n", objSun.GetStateName());
+	Door objDoor(new Closed);
+	printf("The door is %s !!!\n\n", objDoor.GetStateName());
 
-	objSun.StateChanged1();
-	printf("The door is %s !!!\n\n", objSun.GetStateName());
+	objDoor.StateChanged1();
+	printf("The door is %s !!!\n\n", objDoor.GetStateName());
 
-	objSun.StateChanged2();objSun.StateChanged2();
-	printf("The door is %s !!!\n\n", objSun.GetStateName());
+	objDoor.StateChanged2();objDoor.StateChanged2();
+	printf("The door is %s !!!\n\n", objDoor.GetStateName());
 
 	system("pause");
 
