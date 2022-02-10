@@ -6,14 +6,14 @@ class StateBase
 {
 public:
 	virtual StateBase* GetNextState() = 0;
-	virtual StateBase* GetPreviousState() = 0;
+	virtual StateBase* GetNextState2() = 0;
 	virtual    char* ToString() = 0;
 };
 class Locked : public StateBase
 {
 public:
 	virtual StateBase* GetNextState();
-	virtual StateBase* GetPreviousState();
+	virtual StateBase* GetNextState2();
 	virtual    char* ToString() {
 		return " Locked";
 	}
@@ -23,7 +23,7 @@ class Closed : public StateBase
 {
 public:
 	virtual StateBase* GetNextState();
-	virtual StateBase* GetPreviousState();
+	virtual StateBase* GetNextState2();
 	virtual    char* ToString() {
 		return "Closed";
 	}
@@ -33,7 +33,7 @@ class Opened : public StateBase
 {
 public:
 	virtual StateBase* GetNextState();
-	virtual StateBase* GetPreviousState();
+	virtual StateBase* GetNextState2();
 	virtual    char* ToString() {
 		return "Opened";
 	}
@@ -43,21 +43,21 @@ public:
 StateBase* Locked::GetNextState() {
 	return new Closed();
 }
-StateBase* Locked::GetPreviousState() {
+StateBase* Locked::GetNextState2() {
 	return new Closed();
 }
 
 StateBase* Closed::GetNextState() {
 	return new Opened();
 }
-StateBase* Closed::GetPreviousState() {
+StateBase* Closed::GetNextState2() {
 	return new Locked();
 }
 
 StateBase* Opened::GetNextState() {
 	return new Closed();
 }
-StateBase* Opened::GetPreviousState() {
+StateBase* Opened::GetNextState2() {
 	return new Closed();
 }
 
@@ -79,7 +79,7 @@ public:
 		}
 	}void StateChanged2() {
 		if (m_pState) {
-			StateBase* pState = m_pState->GetPreviousState();
+			StateBase* pState = m_pState->GetNextState2();
 			delete m_pState;
 			m_pState = pState;
 		}
@@ -100,11 +100,10 @@ void main()
 	printf("The door is %s !!!\n\n", objSun.GetStateName());
 
 	objSun.StateChanged1();
-	printf("The door is is %s !!!\n\n", objSun.GetStateName());
+	printf("The door is %s !!!\n\n", objSun.GetStateName());
 
 	objSun.StateChanged2();objSun.StateChanged2();
-	printf("The door is is %s !!!\n\n", objSun.GetStateName());
-
+	printf("The door is %s !!!\n\n", objSun.GetStateName());
 
 	system("pause");
 
