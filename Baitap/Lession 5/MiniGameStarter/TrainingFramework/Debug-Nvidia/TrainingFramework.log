@@ -1,0 +1,4 @@
+﻿  GSCredit.cpp
+D:\TT gameloft\tailieu\MiniGameStarter\TrainingFramework\GSCredit.cpp(23,92): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+D:\TT gameloft\tailieu\MiniGameStarter\TrainingFramework\GSCredit.cpp(23,58): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+  TrainingFramework.vcxproj -> D:\TT gameloft\tailieu\MiniGameStarter\BIN-Nvidia\TrainingFramework.exe
