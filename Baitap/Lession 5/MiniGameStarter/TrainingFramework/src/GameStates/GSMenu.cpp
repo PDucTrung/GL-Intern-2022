@@ -1,5 +1,8 @@
 #include "GSMenu.h"
 #include "Camera.h"
+#include "../Soloud/soloud.h"
+#include "../Soloud/soloud_wav.h"
+#include "String.h"
 
 GSMenu::GSMenu() : GameStateBase(StateType::STATE_MENU), 
 	m_background(nullptr), m_listButton(std::list<std::shared_ptr<GameButton>>{}), m_textGameName(nullptr)
@@ -69,6 +72,9 @@ void GSMenu::Init()
 	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("Brightly Crush Shine.otf");
 	m_textGameName = std::make_shared< Text>(shader, font, "Super Shark", Vector4(1.0f, 0.5f, 0.0f, 1.0f), 3.0f);
 	m_textGameName->Set2DPosition(Vector2(60, 200));
+
+	//sound
+	ResourceManagers::GetInstance()->PlaySound("soundtrack3");
 }
 
 void GSMenu::Exit()

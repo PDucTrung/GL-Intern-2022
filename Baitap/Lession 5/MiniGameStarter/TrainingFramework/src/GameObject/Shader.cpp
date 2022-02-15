@@ -18,7 +18,7 @@ Shader::~Shader()
 
 GLint Shader::Init(const std::string& fileVertexShader, const std::string& fileFragmentShader)
 {
-	LOGI("Compile Shader:%s\t%s\t\t\n", fileVertexShader.c_str(), fileFragmentShader.c_str());
+	/*LOGI("Compile Shader:%s\t%s\t\t\n", fileVertexShader.c_str(), fileFragmentShader.c_str());*/
 	m_vertexShaderId = esLoadShader(GL_VERTEX_SHADER, fileVertexShader);
 	if (m_vertexShaderId == 0)
 	{
@@ -41,8 +41,8 @@ GLint Shader::Init(const std::string& fileVertexShader, const std::string& fileF
 	m_iTextureLoc[2] = glGetUniformLocation(m_program, "u_texture2");
 	m_iTextureLoc[3] = glGetUniformLocation(m_program, "u_texture3");
 	m_iTextureLoc[4] = glGetUniformLocation(m_program, "u_texture4");
-	LOGI("Done %s %s \n", fileVertexShader.c_str(), fileFragmentShader.c_str());
-	return 0;
+	/*LOGI("Done %s %s \n", fileVertexShader.c_str(), fileFragmentShader.c_str());
+	return 0;*/
 }
 
 GLuint Shader::GetAttribLocation(const std::string& str)

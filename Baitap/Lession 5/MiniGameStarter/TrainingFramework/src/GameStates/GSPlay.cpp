@@ -56,6 +56,7 @@ void GSPlay::Init()
 	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("Brightly Crush Shine.otf");
 	m_score = std::make_shared< Text>(shader, font, "score: 0", TextColor::RED, 1.0);
 	m_score->Set2DPosition(Vector2(5, 25));
+
 }
 
 void GSPlay::Exit()
