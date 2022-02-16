@@ -57,6 +57,13 @@ void GSPlay::Init()
 	m_score = std::make_shared< Text>(shader, font, "score: 0", TextColor::RED, 1.0);
 	m_score->Set2DPosition(Vector2(5, 25));
 
+	//animation
+	/*shader = ResourceManagers::GetInstance()->GetShader("Aminmation");
+	texture = ResourceManagers::GetInstance()->GetTexture("shark.tga");
+	std::shared_ptr<GameButton>  obj = std::make_shared<GameButton>(model, shader, texture, 6, 0.1f);
+	obj->Set2DPosition(240, 400);
+	obj->SetSize(50, 50);
+	m_listSpireAnimation.push_back(obj);*/
 }
 
 void GSPlay::Exit()
