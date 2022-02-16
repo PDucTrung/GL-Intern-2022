@@ -1,4 +1,4 @@
-#Tên game: Super shark Jump
+#Tên game: Super shark
 
 * Thể loại: adventure, arcade 
 * Cơ chế hoạt động: Để điều khiển nhấn phím space để nhảy tránh các chướng ngại vật trên đường.
