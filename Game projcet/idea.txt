@@ -1,4 +1,4 @@
-#Game name: Super shark Jump
+#Game name: Super shark
 * Background: Bringing in curiosity the baby shark loves to explore the ocean, help him overcome the obstacles to roam the ocean.
 * Genre: adventure, arcade
 * Operation mechanism: To control, press SPACEBAR to jump avoiding the obstacles on the way.
