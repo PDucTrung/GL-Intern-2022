@@ -74,7 +74,7 @@ void GSMenu::Init()
 	m_textGameName->Set2DPosition(Vector2(60, 200));
 
 	//sound
-	ResourceManagers::GetInstance()->PlaySound("soundtrack3");
+	ResourceManagers::GetInstance()->PlaySound("soundtrack1");
 }
 
 void GSMenu::Exit()
