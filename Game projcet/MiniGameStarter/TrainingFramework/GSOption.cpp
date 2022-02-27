@@ -25,7 +25,7 @@ void GSOption::Init()
 	// button music on
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_music.tga");
 	std::shared_ptr<GameButton> button2 = std::make_shared<GameButton>(model, shader, texture);
-	button2->Set2DPosition(Globals::screenWidth - 350, (float)Globals::screenHeight / 2);
+	button2->Set2DPosition(Globals::screenWidth - 310, (float)Globals::screenHeight / 2);
 	button2->SetSize(50, 50);
 	button2->SetOnClick([]() {
 		ResourceManagers::GetInstance()->PlaySound("soundtrack3");
@@ -35,7 +35,7 @@ void GSOption::Init()
 	// button music off
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_music_off.tga");
 	std::shared_ptr<GameButton> button3 = std::make_shared<GameButton>(model, shader, texture);
-	button3->Set2DPosition(Globals::screenWidth - 280, (float)Globals::screenHeight / 2);
+	button3->Set2DPosition(Globals::screenWidth - 240, (float)Globals::screenHeight / 2);
 	button3->SetSize(50, 50);
 	button3->SetOnClick([]() {
 		ResourceManagers::GetInstance()->PauseSound("soundtrack3");
@@ -45,22 +45,12 @@ void GSOption::Init()
 	// button help
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_help.tga");
 	std::shared_ptr<GameButton> button4 = std::make_shared<GameButton>(model, shader, texture);
-	button4->Set2DPosition(Globals::screenWidth - 210, (float)Globals::screenHeight / 2);
+	button4->Set2DPosition(Globals::screenWidth - 170, (float)Globals::screenHeight / 2);
 	button4->SetSize(50, 50);
 	button4->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_CREDIT);
 		});
 	m_listButton.push_back(button4);
-
-	// but restart
-	texture = ResourceManagers::GetInstance()->GetTexture("btn_restart.tga");
-	std::shared_ptr<GameButton> button5 = std::make_shared<GameButton>(model, shader, texture);
-	button5->Set2DPosition(Globals::screenWidth - 140, (float)Globals::screenHeight / 2);
-	button5->SetSize(50, 50);
-	button5->SetOnClick([]() {
-		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY);
-		});
-	m_listButton.push_back(button5);
 
 	// button close
 	texture = ResourceManagers::GetInstance()->GetTexture("btn_close.tga");

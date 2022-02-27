@@ -1,2 +1,9 @@
-﻿  GSMenu.cpp
-  TrainingFramework.vcxproj -> D:\TT gameloft\Gameloft-Intern-2022\Baitap\Lession 5\MiniGameStarter\BIN-Nvidia\TrainingFramework.exe
+﻿GSCredit.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+LINK : warning LNK4098: defaultlib 'LIBCMTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+UtilitiesD.lib(esShader.obj) : warning LNK4204: 'D:\TT gameloft\tailieu\MiniGameStarter\BIN-Nvidia\Utilities.pdb' is missing debugging information for referencing module; linking object as if no debug info
+UtilitiesD.lib(esUtil.obj) : warning LNK4204: 'D:\TT gameloft\tailieu\MiniGameStarter\BIN-Nvidia\Utilities.pdb' is missing debugging information for referencing module; linking object as if no debug info
+UtilitiesD.lib(esUtil_win.obj) : warning LNK4204: 'D:\TT gameloft\tailieu\MiniGameStarter\BIN-Nvidia\Utilities.pdb' is missing debugging information for referencing module; linking object as if no debug info
+UtilitiesD.lib(CMath.obj) : warning LNK4204: 'D:\TT gameloft\tailieu\MiniGameStarter\BIN-Nvidia\Utilities.pdb' is missing debugging information for referencing module; linking object as if no debug info
+UtilitiesD.lib(TGA.obj) : warning LNK4204: 'D:\TT gameloft\tailieu\MiniGameStarter\BIN-Nvidia\Utilities.pdb' is missing debugging information for referencing module; linking object as if no debug info
+  TrainingFramework.vcxproj -> D:\TT gameloft\tailieu\MiniGameStarter\BIN-Nvidia\TrainingFramework.exe

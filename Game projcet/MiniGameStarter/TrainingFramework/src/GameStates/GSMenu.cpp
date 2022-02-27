@@ -48,7 +48,7 @@ void GSMenu::Init()
 	m_listButton.push_back(button2);
 
 	// Credit
-	texture = ResourceManagers::GetInstance()->GetTexture("btn_menu.tga");
+	texture = ResourceManagers::GetInstance()->GetTexture("btn_help.tga");
 	std::shared_ptr<GameButton> button3 = std::make_shared<GameButton>(model, shader, texture);
 	button3->Set2DPosition(Globals::screenWidth - 190, 50);
 	button3->SetSize(50, 50);

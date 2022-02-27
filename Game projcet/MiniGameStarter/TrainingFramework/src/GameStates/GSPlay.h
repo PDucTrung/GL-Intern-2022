@@ -1,6 +1,10 @@
 #pragma once
 #include "GameStateBase.h"
+/*#include "Sprite3D.h"
+#include "Sprite2D.h"
+#include "Text.h"*/
 #include "GameButton.h"
+#include "../SpriteAnimation.h"
 
 class GSPlay :
 	public GameStateBase
@@ -26,6 +30,6 @@ private:
 	std::shared_ptr<Sprite2D>	m_background;
 	std::shared_ptr<Text>		m_score;
 	std::list<std::shared_ptr<GameButton>>	m_listButton;
-
+	std::list<std::shared_ptr<SpriteAnimation>>	m_listAnimation;
 };
 

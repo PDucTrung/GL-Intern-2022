@@ -9,6 +9,7 @@
 #include "Text.h"
 #include "GameButton.h"
 #include "../GSOption.h"
+#include "../SpriteAnimation.h"
 
 GSPlay::GSPlay()
 {
@@ -57,13 +58,29 @@ void GSPlay::Init()
 	m_score = std::make_shared< Text>(shader, font, "score: 0", TextColor::RED, 1.0);
 	m_score->Set2DPosition(Vector2(5, 25));
 
-	//animation
-	/*shader = ResourceManagers::GetInstance()->GetShader("Aminmation");
-	texture = ResourceManagers::GetInstance()->GetTexture("shark.tga");
-	std::shared_ptr<GameButton>  obj = std::make_shared<GameButton>(model, shader, texture, 6, 0.1f);
-	obj->Set2DPosition(240, 400);
-	obj->SetSize(50, 50);
-	m_listSpireAnimation.push_back(obj);*/
+	//shark
+	shader = ResourceManagers::GetInstance()->GetShader("Animation");
+	texture = ResourceManagers::GetInstance()->GetTexture("shark2.tga");
+	std::shared_ptr<SpriteAnimation>  shark = std::make_shared<SpriteAnimation>(model, shader, texture, 1, 0.1f);
+	shark->Set2DPosition(100, 380);
+	shark->SetSize(250, 150);
+	m_listAnimation.push_back(shark);
+
+	//coral
+	shader = ResourceManagers::GetInstance()->GetShader("Animation");
+	texture = ResourceManagers::GetInstance()->GetTexture("coral2.tga");
+	std::shared_ptr<SpriteAnimation>  coral = std::make_shared<SpriteAnimation>(model, shader, texture, 1, 0.1f);
+	coral->Set2DPosition(240, 620);
+	coral->SetSize(250, 620);
+	m_listAnimation.push_back(coral);
+
+	//monter
+	shader = ResourceManagers::GetInstance()->GetShader("Animation");
+	texture = ResourceManagers::GetInstance()->GetTexture("chr3.tga");
+	std::shared_ptr<SpriteAnimation>  monter = std::make_shared<SpriteAnimation>(model, shader, texture, 1, 0.1f);
+	monter->Set2DPosition(240, 150);
+	monter->SetSize(250, 620);
+	m_listAnimation.push_back(monter);
 }
 
 void GSPlay::Exit()
@@ -86,13 +103,16 @@ void GSPlay::HandleEvents()
 
 void GSPlay::HandleKeyEvents(int key, bool bIsPressed)
 {
+	if (key == 32) {
+		std::cout << "space" << std::endl;
+	}
 }
 
 void GSPlay::HandleTouchEvents(int x, int y, bool bIsPressed)
 {
 	for (auto button : m_listButton)
 	{
-		if(button->HandleTouchEvents(x, y, bIsPressed))
+		if (button->HandleTouchEvents(x, y, bIsPressed))
 		{
 			break;
 		}
@@ -109,6 +129,10 @@ void GSPlay::Update(float deltaTime)
 	{
 		it->Update(deltaTime);
 	}
+	for (auto it : m_listAnimation)
+	{
+		it->Update(deltaTime);
+	}
 }
 
 void GSPlay::Draw()
@@ -116,6 +140,10 @@ void GSPlay::Draw()
 	m_background->Draw();
 	m_score->Draw();
 	for (auto it : m_listButton)
+	{
+		it->Draw();
+	}
+	for (auto it : m_listAnimation)
 	{
 		it->Draw();
 	}

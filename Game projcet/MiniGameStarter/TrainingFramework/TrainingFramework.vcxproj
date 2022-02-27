@@ -345,6 +345,7 @@
   <ItemGroup>
     <ClCompile Include="GSCredit.cpp" />
     <ClCompile Include="GSOption.cpp" />
+    <ClCompile Include="SpriteAnimation.cpp" />
     <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\GameManager\ResourceManagers.cpp" />
     <ClCompile Include="src\GameObject\Font.cpp" />
@@ -366,6 +367,7 @@
   <ItemGroup>
     <ClInclude Include="GSCredit.h" />
     <ClInclude Include="GSOption.h" />
+    <ClInclude Include="SpriteAnimation.h" />
     <ClInclude Include="src\Application.h" />
     <ClInclude Include="src\GameConfig.h" />
     <ClInclude Include="src\GameManager\ResourceManagers.h" />

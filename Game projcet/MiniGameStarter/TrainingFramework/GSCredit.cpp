@@ -15,7 +15,7 @@ GSCredit::~GSCredit()
 void GSCredit::Init()
 {
 	auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
-	auto texture = ResourceManagers::GetInstance()->GetTexture("bg_play2.tga");
+	auto texture = ResourceManagers::GetInstance()->GetTexture("bg3.tga");
 
 	// background
 	auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
@@ -32,6 +32,11 @@ void GSCredit::Init()
 		GameStateMachine::GetInstance()->PopState();
 		});
 	m_listButton.push_back(button);
+
+	shader = ResourceManagers::GetInstance()->GetShader("TextShader");
+	std::shared_ptr<Font> font = ResourceManagers::GetInstance()->GetFont("Brightly Crush Shine.otf");
+	m_score = std::make_shared< Text>(shader, font, "Credit by Pham Duc Trung", TextColor::RED, 1.5);
+	m_score->Set2DPosition(Globals::screenWidth - 470, (float)Globals::screenHeight / 2);
 }
 
 void GSCredit::Exit()
@@ -82,6 +87,7 @@ void GSCredit::Update(float deltaTime)
 void GSCredit::Draw()
 {
 	m_background->Draw();
+	m_score->Draw();
 	for (auto it : m_listButton)
 	{
 		it->Draw();
