@@ -66,6 +66,13 @@ void GSPlay::Init()
 	shark->SetSize(250, 150);
 	m_listAnimation.push_back(shark);
 
+	shader = ResourceManagers::GetInstance()->GetShader("Animation");
+	texture = ResourceManagers::GetInstance()->GetTexture("coin.tga");
+	std::shared_ptr<SpriteAnimation>  coin = std::make_shared<SpriteAnimation>(model, shader, texture, 18, 0.1f);
+	coin->Set2DPosition(240, 380);
+	coin->SetSize(150, 150);
+	m_listAnimation.push_back(coin);
+
 	//coral
 	shader = ResourceManagers::GetInstance()->GetShader("Animation");
 	texture = ResourceManagers::GetInstance()->GetTexture("coral2.tga");
